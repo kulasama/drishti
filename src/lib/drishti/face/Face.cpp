@@ -221,7 +221,7 @@ cv::Mat estimateMotionLeastSquares(const FaceModel& a, const FaceModel& b)
     CV_Assert(b.noseTip.has);
     std::vector<cv::Point2f> ptsB{ b.eyeRightCenter.value, b.eyeLeftCenter.value, b.noseTip.value };
 
-    cv::Mat H = cv::videostab::estimateGlobalMotionLeastSquares(ptsA, ptsB, cv::videostab::MM_SIMILARITY);
+    cv::Mat H = cv::estimateRigidTransform(ptsA, ptsB, false);
     if (!H.empty())
     {
         H.convertTo(H, CV_64F);

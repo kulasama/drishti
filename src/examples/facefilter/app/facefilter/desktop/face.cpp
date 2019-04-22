@@ -165,8 +165,8 @@ int main(int argc, char** argv)
         return 1;
     }
 
-    video->set(CV_CAP_PROP_FRAME_WIDTH, params.videoWidth);
-    video->set(CV_CAP_PROP_FRAME_HEIGHT, params.videoHeight);
+    video->set(cv::CAP_PROP_FRAME_WIDTH, params.videoWidth);
+    video->set(cv::CAP_PROP_FRAME_HEIGHT, params.videoHeight);
 
     cv::Size size = getSize(*video);
     if (size.area() == 0)
