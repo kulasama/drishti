@@ -14,9 +14,7 @@
 #include "drishti/geometry/motion.h"
 #include "drishti/face/FaceIO.h"
 
-#include <opencv2/videostab/global_motion.hpp>
 #include <opencv2/video/tracking.hpp>
-#include <opencv2/highgui.hpp>
 
 #include <array>
 
